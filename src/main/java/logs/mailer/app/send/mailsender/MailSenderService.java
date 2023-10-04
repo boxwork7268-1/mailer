@@ -18,12 +18,12 @@ public class MailSenderService {
 	public void sendEmail(String toEmail, String subject, String body) throws MessagingException, UnsupportedEncodingException {
 		MimeMessage message = mailSender.createMimeMessage();
 		MimeMessageHelper helper = new MimeMessageHelper(message);
-		helper.setFrom("randy.burdbige@turnerconstruction.ltd", "Inquiry Regarding Building Materials Procurement for Our Construction Project");
+		helper.setFrom("randy.burdbige@turnerconstruction.ltd", "Turner Construction Company");
 		helper.setTo(toEmail);
 		helper.setSubject(subject);
 		helper.setText(body, true);
 		
 		mailSender.send(message);
-		System.out.println("Mail sent successfully");
+		System.out.println(toEmail+ " Mail sent successfully");
 	}
 }

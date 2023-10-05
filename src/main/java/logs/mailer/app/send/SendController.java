@@ -18,4 +18,9 @@ public class SendController {
 	public void addSends(@RequestBody List<Send> sends) {
 		sendService.addSends(sends);
 	}
+	
+	@RequestMapping(method = RequestMethod.POST, value = "/addsendsreminder")
+	public void addSendsReminder(@RequestBody List<Send> sends) {
+		sendService.addSendsReminder(sends);
+	}
 }
